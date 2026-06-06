@@ -27,8 +27,8 @@ $env:ROBLOX_API_KEY = "blank"
 #### using command prompt
 
 ```cmd
-set ROBLOSECURITY=blank
-set ROBLOX_API_KEY=blank
+set ROBLOSECURITY = blank
+set ROBLOX_API_KEY = blank
 .\lune run publish.luau
 ```
 
