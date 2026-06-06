@@ -16,8 +16,21 @@ right click inside of it and press **open in terminal**
 ---
 
 ### 2. running the auto publisher
-run these commands in powershell
+
+#### using powershell
+
 ```powershell
 $env:ROBLOSECURITY = "blank"
 $env:ROBLOX_API_KEY = "blank"
 .\lune run publish.luau
+```
+
+#### using command prompt
+
+```cmd
+set ROBLOSECURITY=blank
+set ROBLOX_API_KEY=blank
+lune run publish.luau
+```
+
+`"blank"` is supposed to be replaced
