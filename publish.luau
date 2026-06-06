@@ -37,7 +37,7 @@ local places = {
 	{ name = "Evercrescent Mountain", placeId = "16067567346" },
 }
 
-local downloaded: { { name: string, placeId: string, data: string } } = {}
+local downloaded: { { name : string, placeId : string, data : string } } = { }
 
 for _, place in places do
 	local name = place.name
