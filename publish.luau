@@ -2,6 +2,7 @@
 local net = require("@lune/net") :: any
 local process = require("@lune/process") :: any
 local stdio = require("@lune/stdio") :: any
+local serde = require("@lune/serde") :: any
 
 local APIKey = assert(process.env.ROBLOX_API_KEY, 'missing "ROBLOX_API_KEY" environment variable')
 local ROBLOSECURITY = assert(process.env.ROBLOSECURITY, 'missing "ROBLOSECURITY" environment variable')
@@ -76,7 +77,15 @@ for _, place in downloaded do
 	})
 
 	if response.statusCode >= 200 and response.statusCode < 300 then
-		print("PUBLISHED!")
+		local success, result = pcall(function()
+			return serde.decode("json", response.body)
+		end)
+
+		if success and typeof(result) == "table" and result.versionNumber ~= nil then
+			print(`PUBLISHED! (v{result.versionNumber})`)
+		else
+			print("PUBLISHED!")
+		end
 	else
 		error(`FAILED! HTTP {response.statusCode}: {response.body}`)
 	end
