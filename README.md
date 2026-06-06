@@ -1,6 +1,6 @@
 # EToH XL Auto Publisher
 
-> keep `.ROBLOSECURITY` and `ROBLOX_API_KEY` private. 
+> keep `ROBLOSECURITY` and `ROBLOX_API_KEY` private. 
 > **DO NOT POST THESE ANYWHERE!!!!!**
 
 ---
