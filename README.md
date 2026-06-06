@@ -1,6 +1,6 @@
 # EToH XL Auto Publisher
 
-> **read:** keep `.ROBLOSECURITY` and `ROBLOX_API_KEY` private
+> keep `.ROBLOSECURITY` and `ROBLOX_API_KEY` private. 
 > **DO NOT POST THESE ANYWHERE!!!!!**
 
 ---
@@ -32,4 +32,4 @@ set ROBLOX_API_KEY=blank
 .\lune run publish.luau
 ```
 
-`"blank"` is supposed to be replaced
+`blank` is supposed to be replaced
