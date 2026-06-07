@@ -44,7 +44,7 @@ for _, place in places do
 	local name = place.name
 	local placeId = place.placeId
 
-	stdio.write(`DOWNLOADING {name} ... `)
+	stdio.write(`DOWNLOADING {name} ... - `)
 
 	local response = net.request({
 		url = `https://assetdelivery.roblox.com/v1/asset/?id={placeId}`,
@@ -64,7 +64,7 @@ for _, place in places do
 end
 
 for _, place in downloaded do
-	stdio.write(`PUBLISHING {place.name} ... `)
+	stdio.write(`PUBLISHING {place.name} ... - `)
 
 	local response = net.request({
 		url = `https://apis.roblox.com/universes/v1/4610122749/places/{place.placeId}/versions?versionType=Published`,
