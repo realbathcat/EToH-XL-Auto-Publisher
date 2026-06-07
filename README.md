@@ -33,3 +33,5 @@ set ROBLOX_API_KEY = blank
 ```
 
 `blank` is supposed to be replaced
+
+YOU MUST HAVE ACCESS TO YOUR API KEY IN ORDER TO PUBLISH TO XL!!!!!
