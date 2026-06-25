@@ -1,7 +1,7 @@
 # EToH XL Auto Publisher
 
-> keep `ROBLOSECURITY` and `ROBLOX_API_KEY` private. 
-> **DO NOT POST THESE ANYWHERE!!!!!**
+> keep `ROBLOX_API_KEY` private. 
+> **DO NOT POST IT ANYWHERE**
 
 ---
 
@@ -19,7 +19,6 @@ right click inside of it and press **open in terminal**
 #### using powershell
 
 ```powershell
-$env:ROBLOSECURITY = "blank"
 $env:ROBLOX_API_KEY = "blank"
 .\lune run publish.luau
 ```
@@ -27,11 +26,10 @@ $env:ROBLOX_API_KEY = "blank"
 #### using command prompt
 
 ```cmd
-set ROBLOSECURITY = blank
 set ROBLOX_API_KEY = blank
 .\lune run publish.luau
 ```
 
 `blank` is supposed to be replaced
 
-YOU MUST HAVE ACCESS TO YOUR API KEY IN ORDER TO PUBLISH TO XL!!!!!
+YOU MUST HAVE ACCESS TO YOUR API KEY IN ORDER TO PUBLISH TO XL!
