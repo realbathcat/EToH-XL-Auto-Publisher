@@ -39,21 +39,20 @@ local places = {
 	{ name = "Evercrescent Mountain", placeId = "16067567346" },
 }
 
-local downloaded = {}
-local failed = {}
+local downloaded = { }
+local failed = { }
 
-local function request(opts: any, context: string): any
+local function request( opts : any, context : string ) : any
 	for attempt = 1, 5 do
-		local ok, result = pcall(net.request, opts)
+		local success, result = pcall(net.request, opts)
 
-		if not ok then
+		if not success then
 			warn(`{context}: request error (attempt {attempt}/{5}): {result}`)
 			task.wait(2 ^ attempt)
 			continue
 		end
 
 		local response = result :: any
-
 		if response.statusCode == 429 then
 			local retryAfter = tonumber(response.headers and response.headers["retry-after"]) or (2 ^ attempt)
 			warn(`{context}: rate limited, waiting {retryAfter}s (attempt {attempt}/{5})`)
@@ -98,7 +97,7 @@ for _, place in places do
 		return serde.decode("json", response.body)
 	end)
 
-	local cdn: string? = nil
+	local cdn : string? = nil
 	if decode and typeof(data) == "table" then
 		if typeof(data.location) == "string" then
 			cdn = data.location
